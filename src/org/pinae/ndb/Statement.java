@@ -2,6 +2,7 @@ package org.pinae.ndb;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -123,6 +124,8 @@ public class Statement {
 				if (result instanceof List){
 					if (((List)result).size() > 0){
 						result = ((List)result).get(0);
+					} else {
+						result = new HashMap<String, Object>();
 					}
 				}
 			} else if (command.equalsIgnoreCase("delete")) {
