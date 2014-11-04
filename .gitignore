@@ -14,3 +14,5 @@ hs_err_pid*
 *.classpath
 *.prefs
 /lib/
+/bin
+/.DS_Store
