@@ -36,6 +36,18 @@ public class StatementTest {
 		}
 	}
 	
+	@Test
+	public void testExist(){
+		Object result = null;
+		
+		//Exist：存在测试
+		result = statment.execute(ndb, "exist:firewall->interface->name:dmz && ip:192.168.12.2");
+		assertEquals(((Boolean)result).booleanValue(), true);
+		
+		result = statment.execute(ndb, "exist:firewall->interface->name:boss && ip:192.168.32.21");
+		assertEquals(((Boolean)result).booleanValue(), false);
+	}
+	
 	@SuppressWarnings("rawtypes")
 	@Test
 	public void testSelect(){

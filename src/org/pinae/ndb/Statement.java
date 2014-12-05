@@ -108,8 +108,17 @@ public class Statement {
 		Object result = ndb;
 
 		if (command != null) {
-
-			if (command.equalsIgnoreCase("select")) {
+			if (command.equalsIgnoreCase("exist")) {
+				result = new Select().select(ndb, path);
+				
+				if (result != null && result instanceof List){
+					if (((List)result).size() > 0){
+						result = new Boolean(true);
+					} else {
+						result = new Boolean(false);
+					}
+				}
+			} else if (command.equalsIgnoreCase("select")) {
 				if (action != null) {
 					result = new Select().select(ndb, path, (OperationAction)action);
 				} else {
@@ -121,7 +130,7 @@ public class Statement {
 				} else {
 					result = new Select().select(ndb, path);
 				}
-				if (result instanceof List){
+				if (result != null && result instanceof List){
 					if (((List)result).size() > 0){
 						result = ((List)result).get(0);
 					} else {
@@ -147,7 +156,6 @@ public class Statement {
 				} else {
 					result = new Insert().insert(ndb, path, value);
 				}
-				
 			} else if (command.equalsIgnoreCase("clean")) {
 				result = new Cleaner().clean(ndb);
 			} else if (command.equalsIgnoreCase("travel")) {
