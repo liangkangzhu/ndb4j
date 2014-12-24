@@ -192,15 +192,19 @@ public abstract class Locator {
 	
 	protected abstract void doAction(Object item);
 	
-	protected Map<String, String> convertValueMap(String updateValue){
+	protected Map<String, String> convertValueMap(String value){
 		Map<String, String> updateValueMap = new HashMap<String, String>();
-		String values[] = updateValue.split(",");
-		for (String tempValue : values){
-			String valuePair[] = tempValue.split("=");
-			if (valuePair.length == 2){
-				updateValueMap.put(valuePair[0].trim(), valuePair[1].trim());
+		
+		if (StringUtils.isNotEmpty(value)) {
+			String values[] = value.split(",");
+			for (String tempValue : values){
+				String valuePair[] = tempValue.split("=");
+				if (valuePair.length == 2){
+					updateValueMap.put(valuePair[0].trim(), valuePair[1].trim());
+				}
 			}
 		}
+		
 		return updateValueMap;
 	}
 	
