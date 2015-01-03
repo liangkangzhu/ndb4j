@@ -133,4 +133,21 @@ public class MapHelper {
 		return dst;
 	}
 	
+	public static String toString(Map<?, ?> src, String format) {
+		if (src != null && src.size() > 0) {
+			Set<?> keySet = src.keySet();
+			for (Object key : keySet) {
+				if (key != null) {
+					Object value = src.get(key);
+					if (value != null) {
+						format = format.replaceAll("\\{" + key.toString() + "\\}", value.toString());
+					}
+				}
+			}
+		} else {
+			return null;
+		}
+		return format;
+	}
+	
 }
