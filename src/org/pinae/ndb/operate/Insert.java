@@ -18,14 +18,32 @@ public class Insert extends Locator {
 	
 	private OperationAction action = null; //需要执行的行为
 	
-	public Object insert (Map<String, Object> ndb, String path, String updateValue){
-		insertMap = convertValueMap(updateValue);
+	/**
+	 * 在ndb中插入数据
+	 * 
+	 * @param ndb 需要插入数据的ndb
+	 * @param path 数据插入路径
+	 * @param insertValue 需要插入的值
+	 * 
+	 * @return 插入值后的ndb数据
+	 */
+	public Object insert (Map<String, Object> ndb, String path, String insertValue){
+		insertMap = convertValueMap(insertValue);
 		
 		locate(ndb, path, true);
 		
 		return ndb;
 	}
 	
+	/**
+	 * 在ndb中插入数据
+	 * 
+	 * @param ndb 需要插入数据的ndb
+	 * @param path 数据插入路径
+	 * @param action 值插入动作
+	 * 
+	 * @return 插入值后的ndb数据
+	 */
 	public Object insert (Map<String, Object> ndb, String path, OperationAction action){
 		this.action = action;
 		

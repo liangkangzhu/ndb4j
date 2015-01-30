@@ -27,6 +27,9 @@ public class StatementTest {
 	
 	private Map<String, Object> ndb = null;
 	
+	/**
+	 * 单元测试初始化
+	 */
 	@Before
 	public void setUp(){
 		try{
@@ -36,6 +39,9 @@ public class StatementTest {
 		}
 	}
 	
+	/**
+	 * 测试ndb中数据存在
+	 */
 	@Test
 	public void testExist(){
 		Object result = null;
@@ -48,6 +54,9 @@ public class StatementTest {
 		assertEquals(((Boolean)result).booleanValue(), false);
 	}
 	
+	/**
+	 * 测试ndb的select行为
+	 */
 	@SuppressWarnings("rawtypes")
 	@Test
 	public void testSelect(){
@@ -99,6 +108,9 @@ public class StatementTest {
 
 	}
 	
+	/**
+	 * 测试ndb中delete行为
+	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void testDelete(){
@@ -122,6 +134,9 @@ public class StatementTest {
 		assertEquals(resultList.size(), 0);
 	}
 	
+	/**
+	 * 测试ndb中clean行为
+	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void testClean(){
@@ -141,6 +156,9 @@ public class StatementTest {
 		assertEquals(resultList.size(), 2);
 	}
 	
+	/**
+	 * 测试ndb中update行为
+	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Test
 	public void testUpdate(){
@@ -162,6 +180,9 @@ public class StatementTest {
 		assertEquals(resultList.size(), 1);
 	}
 	
+	/**
+	 * 测试ndb中遍历(Travel)行为
+	 */
 	@SuppressWarnings({ "rawtypes", "unchecked"})
 	@Test
 	public void testTravel(){
@@ -181,6 +202,9 @@ public class StatementTest {
 		assertTrue(((List)result).size() > 0);
 	}
 	
+	/**
+	 * 测试ndb中insert行为
+	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Test
 	public void testInsert(){

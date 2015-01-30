@@ -17,6 +17,14 @@ public class Select extends Locator {
 	
 	private OperationAction action = null; //需要执行的行为
 
+	/**
+	 * 在ndb中检索数据
+	 * 
+	 * @param ndb 需要检索的ndb
+	 * @param path 检索路径和查询条件
+	 * 
+	 * @return ndb中查询后的值
+	 */
 	public Object select (Map<String, Object> ndb, String path){
 		resultList = new ArrayList<Object>();
 		
@@ -25,6 +33,15 @@ public class Select extends Locator {
 		return resultList;
 	}
 	
+	/**
+	 * 在ndb中检索数据
+	 * 
+	 * @param ndb 需要检索的ndb
+	 * @param path 检索路径和查询条件
+	 * @param action 查询动作
+	 * 
+	 * @return ndb中查询后的值
+	 */
 	public Object select (Map<String, Object> ndb, String path, OperationAction action){
 		this.action = action;
 		

@@ -17,6 +17,15 @@ public class Update extends Locator {
 	
 	private OperationAction action = null; //需要执行的行为
 	
+	/**
+	 * 更新ndb中的值
+	 * 
+	 * @param ndb 需要更新的ndb
+	 * @param path 更新路径
+	 * @param updateValue 需要更新的值，值采用 key1=value1,key2=value2的模式
+	 * 
+	 * @return 更新后的ndb
+	 */
 	public Object update (Map<String, Object> ndb, String path, String updateValue){
 		updateMap = convertValueMap(updateValue);
 		
@@ -25,6 +34,15 @@ public class Update extends Locator {
 		return ndb;
 	}
 	
+	/**
+	 * 更新ndb中的值
+	 * 
+	 * @param ndb 需要更新的ndb
+	 * @param path 更新路径
+	 * @param action 更细动作
+	 * 
+	 * @return 更新后的ndb
+	 */
 	public Object update (Map<String, Object> ndb, String path, OperationAction action){
 		this.action = action;
 		

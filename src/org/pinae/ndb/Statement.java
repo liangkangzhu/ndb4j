@@ -183,6 +183,7 @@ public class Statement {
 	 * 保存为ndb格式文件
 	 * 
 	 * @param filename 文件名
+	 * @param rootNode 根节点名称
 	 * @param ndb Map格式
 	 * 
 	 * @throws IOException

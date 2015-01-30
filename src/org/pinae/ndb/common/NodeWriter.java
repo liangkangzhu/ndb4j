@@ -22,7 +22,8 @@ public class NodeWriter {
 	 * 保存为ndb格式文件
 	 * 
 	 * @param filename 文件名
-	 * @param ndb Map格式
+	 * @param rootNode 根节点名称
+	 * @param ndb Map格式的ndb数据
 	 * 
 	 * @throws IOException
 	 */

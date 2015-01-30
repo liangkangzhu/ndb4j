@@ -9,7 +9,16 @@ import java.util.Map;
 import org.junit.Test;
 import org.pinae.ndb.common.NodeReader;
 
+/**
+ * ndb读取测试
+ * 
+ * @author huiyugeng
+ *
+ */
 public class LoaderTest {
+	/**
+	 * 测试ndb数据读取
+	 */
 	@Test
 	public void testLoad(){
 		NodeReader loader = new NodeReader();

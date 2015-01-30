@@ -92,6 +92,13 @@ public class MapHelper {
 		return dst;
 	}
 	
+	/**
+	 * 由任意类型的Map转换为Map<String, String>
+	 * 
+	 * @param src 需要进行转换的Map
+	 * 
+	 * @return 转换后的Map<String, String>
+	 */
 	public static Map<String, String> convertToStringMap(Map<?, ?> src) {
 		Map<String, String> dst = new HashMap<String, String>();
 		
@@ -114,6 +121,13 @@ public class MapHelper {
 		return dst;
 	}
 	
+	/**
+	 * 由Map<String, String>转换为Map<Object, Object>
+	 * 
+	 * @param src 需要转换的Map<String, String>
+	 * 
+	 * @return 转换后的Map<Object, Object>
+	 */
 	public static Map<Object, Object> convertToObjectMap(Map<String, String> src) {
 		Map<Object, Object> dst = new HashMap<Object, Object>();
 		
@@ -133,6 +147,15 @@ public class MapHelper {
 		return dst;
 	}
 	
+	/**
+	 * Map转换为字符串
+	 * 根据format格式对Map中的值进行映射，format中需要替换的值使用{}进行包装
+	 * 
+	 * @param src 需要转换的Map
+	 * @param format 字符串格式，例如"{firstname} {lastname}"
+	 * 
+	 * @return 转换后的字符串
+	 */
 	public static String toString(Map<?, ?> src, String format) {
 		if (src != null && src.size() > 0) {
 			Set<?> keySet = src.keySet();

@@ -16,6 +16,14 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class Cleaner {
 	
+	/**
+	 * 清理ndb中的节点
+	 * 如果节点下面没有任何数据，则该节点会被清理
+	 * 
+	 * @param ndb 需要清理的ndb节点
+	 * 
+	 * @return 清理后的ndb节点
+	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Map<String, Object> clean(Map<String, Object> ndb){
 		Map<String, Object> ndbResult = new HashMap<String, Object>();
