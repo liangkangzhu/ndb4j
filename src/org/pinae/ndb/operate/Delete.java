@@ -5,7 +5,7 @@ import java.util.Map;
 import org.pinae.ndb.action.OperationAction;
 
 /**
- * ndb 节点删除
+ * ndb节点删除
  * 
  * @author Huiyugeng
  *

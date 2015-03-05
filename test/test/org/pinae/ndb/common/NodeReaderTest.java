@@ -10,12 +10,12 @@ import org.junit.Test;
 import org.pinae.ndb.common.NodeReader;
 
 /**
- * ndb读取测试
+ * ndb读取单元测试
  * 
- * @author huiyugeng
+ * @author Huiyugeng
  *
  */
-public class LoaderTest {
+public class NodeReaderTest {
 	/**
 	 * 测试ndb数据读取
 	 */

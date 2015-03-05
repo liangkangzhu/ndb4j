@@ -12,8 +12,17 @@ import org.junit.Test;
 import org.pinae.ndb.common.NodeReader;
 import org.pinae.ndb.operate.Select;
 
+/**
+ * ndb节点查询单元测试
+ * 
+ * @author Huiyugeng
+ *
+ */
 public class SelectTest {
 	
+	/**
+	 * ndb检索数据测试
+	 */
 	@Test
 	public void testSelect(){
 		NodeReader parser = new NodeReader();

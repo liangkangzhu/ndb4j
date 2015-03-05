@@ -13,7 +13,6 @@ import org.pinae.ndb.action.TraversalAction;
  * 
  * @author Huiyugeng
  *
- *
  */
 public class Traversal {
 	

@@ -8,12 +8,10 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-
 /**
- * ndb 定位器
+ * ndb定位器
  * 
  * @author Huiyugeng
- *
  *
  */
 public abstract class Locator {

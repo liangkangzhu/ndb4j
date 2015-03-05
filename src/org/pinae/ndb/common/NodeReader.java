@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * ndb格式解析器
  * 
@@ -35,7 +37,7 @@ public class NodeReader {
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		String line = "";
 		while ((line = br.readLine()) != null) {
-			fileContentList.add(line);
+			 fileContentList.add(line);
 		}
 		br.close();
 		
@@ -62,7 +64,7 @@ public class NodeReader {
 			
 			linenum++;
 			
-			if(line==null || line.equals("")){
+			if(line==null || line.equals("") || StringUtils.startsWith(line, "#")){
 				continue;
 			}
 

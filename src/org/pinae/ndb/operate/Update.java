@@ -7,7 +7,7 @@ import java.util.Set;
 import org.pinae.ndb.action.OperationAction;
 
 /**
- * ndb 节点更新
+ * ndb节点更新
  * 
  * @author Huiyugeng
  *

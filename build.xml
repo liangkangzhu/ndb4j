@@ -6,7 +6,7 @@
     </description>
 	
 	<property name="project.name" value="ndb4j"/>
-	<property name="project.version" value="1.1"/>
+	<property name="project.version" value="1.2"/>
 	<property name="root.dir" location="."/>
 	<property name="dist.dir" location="dist"/>
 	<property name="src.dir" location="src"/>

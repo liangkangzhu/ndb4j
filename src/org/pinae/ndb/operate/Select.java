@@ -7,7 +7,7 @@ import java.util.Map;
 import org.pinae.ndb.action.OperationAction;
 
 /**
- * ndb 节点查询
+ * ndb节点查询
  * 
  * @author Huiyugeng
  *
@@ -18,7 +18,7 @@ public class Select extends Locator {
 	private OperationAction action = null; //需要执行的行为
 
 	/**
-	 * 在ndb中检索数据
+	 * ndb检索数据
 	 * 
 	 * @param ndb 需要检索的ndb
 	 * @param path 检索路径和查询条件
